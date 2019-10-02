@@ -25,7 +25,7 @@ public class CanvasActivity extends AppCompatActivity {
             TextView txt = findViewById(R.id.textColor);
             txt.setText(color);
         }
-        //this.getWindow().getDecorView().setBackgroundColor(Color.parseColor(color));
+        this.getWindow().getDecorView().setBackgroundColor(Color.parseColor(color));
     }
 
 }

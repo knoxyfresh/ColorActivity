@@ -25,11 +25,13 @@ public class PaletteActivity extends AppCompatActivity {
         myspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(), CanvasActivity.class);
-                String color = adapterView.getItemAtPosition(i).toString();
-                Log.e("color name",color);
-                intent.putExtra("color",color);
-                startActivity(intent);
+                if(i>0){
+                    Intent intent = new Intent(getApplicationContext(), CanvasActivity.class);
+                    String color = adapterView.getItemAtPosition(i).toString();
+                    Log.e("color name",color);
+                    intent.putExtra("color",color);
+                    startActivity(intent);
+                }
             }
 
             @Override
