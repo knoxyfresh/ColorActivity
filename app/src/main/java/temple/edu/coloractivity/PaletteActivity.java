@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
@@ -25,7 +26,9 @@ public class PaletteActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), CanvasActivity.class);
-                intent.putExtra("color",Color.parseColor((adapterView.getItemAtPosition(i).toString())));
+                String color = adapterView.getItemAtPosition(i).toString();
+                Log.e("color name",color);
+                intent.putExtra("color",color);
                 startActivity(intent);
             }
 
