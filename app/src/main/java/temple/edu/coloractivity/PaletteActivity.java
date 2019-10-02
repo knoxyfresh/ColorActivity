@@ -2,6 +2,7 @@ package temple.edu.coloractivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -23,8 +24,8 @@ public class PaletteActivity extends AppCompatActivity {
         myspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                findViewById(R.id.mainlayout).setBackgroundColor(Color.parseColor(adapterView.getItemAtPosition(i).toString()));
-                view.setBackgroundColor(Color.parseColor("White"));
+                Intent intent = new Intent(getApplicationContext(), CanvasActivity.class);
+                startActivity(intent);
             }
 
             @Override
