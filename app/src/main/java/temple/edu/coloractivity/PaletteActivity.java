@@ -25,6 +25,7 @@ public class PaletteActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), CanvasActivity.class);
+                intent.putExtra("color",Color.parseColor((adapterView.getItemAtPosition(i).toString())));
                 startActivity(intent);
             }
 
