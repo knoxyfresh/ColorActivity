@@ -19,11 +19,13 @@ public class CanvasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_canvas);
         String color= "white";
+        String colorname;
         Bundle extras = getIntent().getExtras();
         if(extras!=null){
             color = extras.getString("color");
+            colorname = extras.getString("colorname");
             TextView txt = findViewById(R.id.textColor);
-            txt.setText(color);
+            txt.setText(colorname);
             this.getWindow().getDecorView().setBackgroundColor(Color.parseColor(color));
         }
     }

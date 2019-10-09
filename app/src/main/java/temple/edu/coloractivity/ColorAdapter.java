@@ -28,6 +28,7 @@ public class ColorAdapter extends BaseAdapter {
     public Object getItem(int i) {
         return colors[i];
     }
+    public String getColorName(int i){return colornames[i];}
 
 
     @Override

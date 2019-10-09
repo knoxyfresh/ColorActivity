@@ -28,9 +28,12 @@ public class PaletteActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if(i>0){
                     Intent intent = new Intent(getApplicationContext(), CanvasActivity.class);
-                    String color = adapterView.getItemAtPosition(i).toString();
+                    ColorAdapter adapter = (ColorAdapter) adapterView.getAdapter();
+                    String colorname = adapter.getColorName(i);
+                    String color = adapter.getItem(i).toString();
                     Log.e("color name",color);
                     intent.putExtra("color",color);
+                    intent.putExtra("colorname",colorname);
                     startActivity(intent);
                 }
             }
