@@ -1,14 +1,28 @@
 <resources>
     <string name="app_name">ColorActivity</string>
     <string name="title_activity_canvas">CanvasActivity</string>
-    <string name="white">white</string>
-    <string name="cyan">cyan</string>
-    <string name="red">red</string>
-    <string name="yellow">yellow</string>
-    <string name="gray">gray</string>
-    <string name="black">black</string>
-    <string name="green">green</string>
-    <string name="blue">blue</string>
-    <string name="teal">teal</string>
-    <string name="olive">olive</string>
+    <string-array name="colornames">
+    <item name="white">white</item>
+    <item name="cyan">cyan</item>
+    <item name="red">red</item>
+    <item name="yellow">yellow</item>
+    <item name="gray">gray</item>
+    <item name="black">black</item>
+    <item name="green">green</item>
+    <item name="blue">blue</item>
+    <item name="teal">teal</item>
+    <item name="olive">olive</item>
+    </string-array>
+    <string-array name="colors">
+    <item>white</item>
+    <item>cyan</item>
+    <item>red</item>
+    <item>yellow</item>
+    <item>gray</item>
+    <item>black</item>
+    <item>green</item>
+    <item>blue</item>
+    <item>teal</item>
+    <item>olive</item>
+    </string-array>
 </resources>

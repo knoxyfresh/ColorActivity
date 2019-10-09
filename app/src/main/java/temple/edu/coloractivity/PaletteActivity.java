@@ -3,6 +3,7 @@ package temple.edu.coloractivity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,8 +19,8 @@ public class PaletteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Spinner myspinner = findViewById(R.id.spinner);
-        String colors[] = {"white","Red","cyan","yellow","gray","black","green","blue","teal","olive"};
-        String colornames[] = {getString(R.string.white),getString(R.string.red),getString(R.string.cyan),getString(R.string.yellow),getString(R.string.gray),getString(R.string.black),getString(R.string.green),getString(R.string.blue),getString(R.string.teal),getString(R.string.olive)};
+        String colors[] = getResources().getStringArray(R.array.colors);
+        String colornames[] = getResources().getStringArray(R.array.colornames);
         ColorAdapter ca = new ColorAdapter(PaletteActivity.this,colornames,colors);
 
         myspinner.setAdapter(ca);

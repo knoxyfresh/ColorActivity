@@ -2,14 +2,28 @@
 <resources>
     <string name="app_name">Actividad de Color</string>
     <string name="title_activity_canvas">Actividad de Lona</string>
-    <string name="white">blanco</string>
-    <string name="cyan">rojo</string>
-    <string name="red">cian</string>
-    <string name="yellow">amarillo</string>
-    <string name="gray">gris</string>
-    <string name="black">negro</string>
-    <string name="green">verde</string>
-    <string name="blue">azul</string>
-    <string name="teal">verde azulado</string>
-    <string name="olive">oliva</string>
+    <string-array name="colornames">
+    <item name="white">blanco</item>
+    <item name="cyan">rojo</item>
+    <item name="red">cian</item>
+    <item name="yellow">amarillo</item>
+    <item name="gray">gris</item>
+    <item name="black">negro</item>
+    <item name="green">verde</item>
+    <item name="blue">azul</item>
+    <item name="teal">verde azulado</item>
+    <item name="olive">oliva</item>
+    </string-array>
+    <string-array name="colors">
+        <item>white</item>
+        <item>cyan</item>
+        <item>red</item>
+        <item>yellow</item>
+        <item>gray</item>
+        <item>black</item>
+        <item>green</item>
+        <item>blue</item>
+        <item>teal</item>
+        <item>olive</item>
+    </string-array>
 </resources>
