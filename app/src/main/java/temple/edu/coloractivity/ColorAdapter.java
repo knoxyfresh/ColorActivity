@@ -11,10 +11,12 @@ public class ColorAdapter extends BaseAdapter {
 
     Context context;
     String colors[];
+    String colornames[];
 
-    public ColorAdapter(Context context, String[] colors){
+    public ColorAdapter(Context context, String[] colornames, String[] colors){
         this.context=context;
         this.colors=colors;
+        this.colornames=colornames;
     }
 
     @Override
@@ -27,6 +29,7 @@ public class ColorAdapter extends BaseAdapter {
         return colors[i];
     }
 
+
     @Override
     public long getItemId(int i) {
         return 0;
@@ -36,8 +39,8 @@ public class ColorAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         TextView textView = new TextView(context);
         String colorval = colors[i];
-        textView.setText(colorval);
         textView.setBackgroundColor(Color.parseColor(colorval));
+        textView.setText(colornames[i]);
         textView.setTextSize(22);
         textView.setPadding(5,5,5,5);
         return textView;

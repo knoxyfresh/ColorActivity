@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Actividad de Color</string>
+    <string name="title_activity_canvas">Actividad de Lona</string>
+    <string name="white">blanco</string>
+    <string name="cyan">rojo</string>
+    <string name="red">cian</string>
+    <string name="yellow">amarillo</string>
+    <string name="gray">gris</string>
+    <string name="black">negro</string>
+    <string name="green">verde</string>
+    <string name="blue">azul</string>
+    <string name="teal">verde azulado</string>
+    <string name="olive">oliva</string>
+</resources>

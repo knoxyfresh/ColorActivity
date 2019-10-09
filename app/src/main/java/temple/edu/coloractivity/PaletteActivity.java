@@ -18,9 +18,9 @@ public class PaletteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Spinner myspinner = findViewById(R.id.spinner);
-        //String colors[] = {"white","Red","cyan","yellow","gray","black","green","blue","teal","olive"};
-        String colors[] = {getString(R.string.white),getString(R.string.red),getString(R.string.yellow),getString(R.string.gray),getString(R.string.black),getString(R.string.green),getString(R.string.blue),getString(R.string.teal),getString(R.string.olive)};
-        ColorAdapter ca = new ColorAdapter(PaletteActivity.this,colors);
+        String colors[] = {"white","Red","cyan","yellow","gray","black","green","blue","teal","olive"};
+        String colornames[] = {getString(R.string.white),getString(R.string.red),getString(R.string.cyan),getString(R.string.yellow),getString(R.string.gray),getString(R.string.black),getString(R.string.green),getString(R.string.blue),getString(R.string.teal),getString(R.string.olive)};
+        ColorAdapter ca = new ColorAdapter(PaletteActivity.this,colornames,colors);
 
         myspinner.setAdapter(ca);
         myspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
