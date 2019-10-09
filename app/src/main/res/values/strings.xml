@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">ColorActivity</string>
     <string name="title_activity_canvas">CanvasActivity</string>
+    <string name="white">white</string>
+    <string name="cyan">cyan</string>
+    <string name="red">red</string>
+    <string name="yellow">yellow</string>
+    <string name="gray">gray</string>
+    <string name="black">black</string>
+    <string name="green">green</string>
+    <string name="blue">blue</string>
+    <string name="teal">teal</string>
+    <string name="olive">olive</string>
 </resources>
