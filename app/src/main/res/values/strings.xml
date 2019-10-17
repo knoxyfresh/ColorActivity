@@ -2,27 +2,30 @@
     <string name="app_name">ColorActivity</string>
     <string name="title_activity_canvas">CanvasActivity</string>
     <string-array name="colornames">
-    <item name="white">white</item>
-    <item name="cyan">cyan</item>
-    <item name="red">red</item>
-    <item name="yellow">yellow</item>
-    <item name="gray">gray</item>
-    <item name="black">black</item>
-    <item name="green">green</item>
-    <item name="blue">blue</item>
-    <item name="teal">teal</item>
-    <item name="olive">olive</item>
+        <item name="white">white</item>
+        <item name="cyan">cyan</item>
+        <item name="red">red</item>
+        <item name="yellow">yellow</item>
+        <item name="gray">gray</item>
+        <item name="black">black</item>
+        <item name="green">green</item>
+        <item name="blue">blue</item>
+        <item name="teal">teal</item>
+        <item name="olive">olive</item>
     </string-array>
     <string-array name="colors">
-    <item>white</item>
-    <item>cyan</item>
-    <item>red</item>
-    <item>yellow</item>
-    <item>gray</item>
-    <item>black</item>
-    <item>green</item>
-    <item>blue</item>
-    <item>teal</item>
-    <item>olive</item>
+        <item>white</item>
+        <item>cyan</item>
+        <item>red</item>
+        <item>yellow</item>
+        <item>gray</item>
+        <item>black</item>
+        <item>green</item>
+        <item>blue</item>
+        <item>teal</item>
+        <item>olive</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
