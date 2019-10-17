@@ -11,7 +11,7 @@ import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.Spinner;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FragmentChooser.ColorListener {
 
     FragmentChooser chooser;
     FragmentColor showcolor;
@@ -45,7 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });*/
+
+
     }
-
-
+    @Override
+    public void onColorSelected(int color){
+        getWindow().getDecorView().setBackgroundColor(color);
+        Log.wtf("OY",Integer.toString(color));
+    }
 }

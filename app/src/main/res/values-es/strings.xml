@@ -4,8 +4,8 @@
     <string name="title_activity_canvas">Actividad de Lona</string>
     <string-array name="colornames">
     <item name="white">blanco</item>
-    <item name="cyan">rojo</item>
-    <item name="red">cian</item>
+    <item name="cyan">cian</item>
+    <item name="red">rojo</item>
     <item name="yellow">amarillo</item>
     <item name="gray">gris</item>
     <item name="black">negro</item>
