@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,7 +67,16 @@ public class FragmentColor extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment_color, container, false);
+        if(savedInstanceState!=null){
+
+        int color = savedInstanceState.getInt("color");
+        View myview = inflater.inflate(R.layout.fragment_fragment_color, container, false);
+        myview.setBackgroundColor(color);
+        return myview;
+        }else{
+            Log.wtf("OY", "onCreateView: no bundle was found!");
+            return inflater.inflate(R.layout.fragment_fragment_color, container, false);
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -79,12 +89,14 @@ public class FragmentColor extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+
+
+//        if (context instanceof OnFragmentInteractionListener) {
+//            mListener = (OnFragmentInteractionListener) context;
+//        } else {
+//           // throw new RuntimeException(context.toString()
+//                   // + " must implement OnFragmentInteractionListener");
+//        }
     }
 
     @Override

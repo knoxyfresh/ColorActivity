@@ -1,8 +1,10 @@
 package temple.edu.coloractivity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,11 +17,17 @@ public class MainActivity extends AppCompatActivity implements FragmentChooser.C
 
     FragmentChooser chooser;
     FragmentColor showcolor;
+    FragmentManager fm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        fm = getSupportFragmentManager();
+        chooser = new FragmentChooser();
+        showcolor = new FragmentColor();
+        fm.beginTransaction().replace(R.id.frameTop,chooser).commit();
 
         //Spinner myspinner = findViewById(R.id.spinner);
         /*String colors[] = getResources().getStringArray(R.array.colors);
@@ -50,7 +58,12 @@ public class MainActivity extends AppCompatActivity implements FragmentChooser.C
     }
     @Override
     public void onColorSelected(int color){
-        getWindow().getDecorView().setBackgroundColor(color);
         Log.wtf("OY",Integer.toString(color));
+        Bundle bundle = new Bundle();
+        bundle.putInt("color",color);
+        showcolor.setArguments(bundle);
+        fm.beginTransaction().replace(R.id.frameBottom,showcolor).commit();
+        //getWindow().getDecorView().setBackgroundColor(color);
+
     }
 }
