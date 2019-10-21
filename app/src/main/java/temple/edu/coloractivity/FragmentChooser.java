@@ -58,11 +58,11 @@ public class FragmentChooser extends Fragment {
         myspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if(i>1){
+//                if(i!=0){
                     ColorAdapter ca= (ColorAdapter)adapterView.getAdapter();
                     int color= Color.parseColor(ca.getItem(i).toString());
                     ((ColorListener)Parent).onColorSelected(color);
-                }
+//                }
             }
 
             @Override

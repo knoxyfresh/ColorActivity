@@ -59,11 +59,14 @@ public class MainActivity extends AppCompatActivity implements FragmentChooser.C
     @Override
     public void onColorSelected(int color){
         Log.wtf("OY",Integer.toString(color));
-        Bundle bundle = new Bundle();
-        bundle.putInt("color",color);
-        showcolor.setArguments(bundle);
-        fm.beginTransaction().replace(R.id.frameBottom,showcolor).commit();
-        //getWindow().getDecorView().setBackgroundColor(color);
+//        Bundle bundle = new Bundle();
+//        bundle.putInt("color",color);
+//        showcolor.setArguments(bundle);
+        showcolor = FragmentColor.newInstance(color);
+        fm.beginTransaction()
+                .replace(R.id.frameBottom, showcolor)
+                .addToBackStack(null)
+                .commit();
 
     }
 }
