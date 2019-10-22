@@ -25,9 +25,20 @@ public class FragmentChooser extends Fragment {
     private ColorAdapter coloradapter;
     Context Parent;
 
+
     public FragmentChooser() {
         // Required empty public constructor
     }
+
+    public static FragmentChooser newInstance(String[] colors, String[] names) {
+        FragmentChooser fragment = new FragmentChooser();
+        Bundle args = new Bundle();
+        args.putStringArray("colors", colors);
+        args.putStringArray("colornames", names);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -50,8 +61,10 @@ public class FragmentChooser extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_fragment_chooser, container, false);
-        final String[] colors = getResources().getStringArray(R.array.colors);
-        String[] colornames = getResources().getStringArray(R.array.colornames);
+//        final String[] colors = getResources().getStringArray(R.array.colors);
+//        String[] colornames = getResources().getStringArray(R.array.colornames);
+        String[] colornames = getArguments().getStringArray("colornames");
+        String[] colors = getArguments().getStringArray("colors");
         coloradapter = new ColorAdapter(getContext(),colornames,colors);
         Spinner myspinner = rootView.findViewById(R.id.spinner);
         myspinner.setAdapter(coloradapter);

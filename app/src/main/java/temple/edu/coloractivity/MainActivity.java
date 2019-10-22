@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements FragmentChooser.C
         setContentView(R.layout.activity_main);
 
         fm = getSupportFragmentManager();
-        chooser = new FragmentChooser();
+        chooser = FragmentChooser.newInstance(getResources().getStringArray(R.array.colors),getResources().getStringArray(R.array.colornames));
         showcolor = new FragmentColor();
         fm.beginTransaction().replace(R.id.frameTop,chooser).commit();
 
